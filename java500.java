@@ -29,6 +29,8 @@ import com.ucloud.paas.proxy.aaaa.util.JSONUtils;
 import com.ucloud.paas.proxy.aaaa.util.PaasAAAAException;
 import com.ucloud.paas.proxy.common.Pagination;
 import com.ucloud.paas.proxy.common.SortDirectionEnum;
+import testmodify
+
 
 public class AAAAServiceTest01 extends ProxyTestBase {
 
@@ -162,7 +164,7 @@ public class AAAAServiceTest01 extends ProxyTestBase {
         Assert.assertEquals(orgs.getGroupCompany().getOrgName(), "中国联通");
     }
     
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void findCompanysBrevityByOrgId() throws PaasAAAAException {
         int cloudOrgId = 1;
         OrgShortNameStructure orgs = aaaa.findCompanysBrevityByOrgId(cloudOrgId);
@@ -264,7 +266,7 @@ public class AAAAServiceTest01 extends ProxyTestBase {
     @Test(enabled = true)
     public void findAllRoleListByAccountID() throws Exception {
         List<RoleEntity> list = aaaa.findAllRoleListByAccountID(1);
-        Assert.assertTrue(list.size() > 0);
+      
     }
 
     @Test(enabled = true)
@@ -403,7 +405,7 @@ public class AAAAServiceTest01 extends ProxyTestBase {
     
     @Test(enabled = true)
     public void findAppListByAccountId() throws Exception {
-        List<AppEntity> list = aaaa.findAppListByAccount(1);
+        List<AppEntityTest> list = aaaa.findAppListByAccount(1);
         Assert.assertTrue(list != null && list.size() > 0);
     }
 
@@ -478,7 +480,7 @@ public class AAAAServiceTest01 extends ProxyTestBase {
         System.out.println(entity.size());
         Assert.assertNotNull(entity);
     }
-
+    测试Webdiff的速度
     public void findFavoriteGroup() throws Exception {
        
     	List<FavoriteGroup> entity = aaaa.findFavoriteGroup(0);
