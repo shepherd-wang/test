@@ -1,0 +1,1 @@
+add git.txt from git in vmware to github
